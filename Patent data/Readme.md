@@ -1,0 +1,4 @@
+1. Prevalent topic - I used topic modeling algorithm called Latent Dirichlet Allocation (LDA) technique to find top 10 prevalent topic in patent data. 
+Approach - I took patent summary in a python dictionary, then vectorized it into 1000 dimensional vector, where each indices represent most frequent term in the patent summary data. I then fed this 358 *1000 feature matrix into LDA to detect topics of interest. LDA allows us to specify numbers of topics that we want to discover.  In our case it 10. I ran LDA for 200 iterations to identify top 10 topics 
+2. I used Kmeans clustering to find natural segments in patent data. 
+Approach - First vectorized patent data using tf-idf vectorizer. This vector consists of 1000 features. It is difficult to visualize such large vector. So I reduced the dimensions of vector to 50 using Singular Value Decomposition (SVD) and then used another dimensionality reduction technique called TSNE to reduce to 2 dimension.
